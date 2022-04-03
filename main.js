@@ -41,7 +41,25 @@ var app = new Vue(
         },
         
         methods: {
+            addJob: function(){
+            let objTodo = {
+                text: this.newItem,
+                done: false,
+            }
 
+            if(!this.newItem == ""){
+                this.lista.push(objTodo);
+                this.newItem = ""
+            }
+        },
+
+        done: function(element){
+            element.done = true
+        },
+
+        removeJob: function(todoIndex){
+            this.lista.splice (todoIndex,1);
+        },
             
             
         }

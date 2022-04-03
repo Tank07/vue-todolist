@@ -14,8 +14,8 @@
 
         <div class="container">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Nuovo Todo" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+                <input type="text" class="form-control" placeholder="Nuovo Todo"  aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button @click="addJob" class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
               </div>
         </div>
 
@@ -24,8 +24,8 @@
             <div>
                 <ul>
 
-                    <li class="" v-for="(element,index) in lista">
-                        <p>{{ element.text }}</p>
+                    <li class="" v-for="(item,index) in lista">
+                        <p>{{ item.text }}</p>
                     </li>
                     
                 </ul>
@@ -42,3 +42,6 @@
     
 </body>
 </html>
+
+
+<!-- Devo aprire un ticket -->
