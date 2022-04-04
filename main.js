@@ -19,13 +19,10 @@ var app = new Vue(
     {
         el: "#jabroni",
         data: {
+            newItem: "",
             lista: [
                 {
                     text: "qualcosa",
-                    done: true
-                },
-                {
-                    text: "qualcosa",
                     done: false
                 },
                 {
@@ -35,6 +32,10 @@ var app = new Vue(
                 {
                     text: "qualcosa",
                     done: false
+                },
+                {
+                    text: "qualcosa",
+                    done: true
                 },
             ]
 
@@ -57,8 +58,8 @@ var app = new Vue(
             element.done = true
         },
 
-        removeJob: function(todoIndex){
-            this.lista.splice (todoIndex,1);
+        removeJob: function(elementIndex){
+            this.lista.splice (elementIndex,1);
         },
             
             
